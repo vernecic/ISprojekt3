@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h2>Popis poslova:</h2>
+        <div class="popis">
+                {% for posal in posao %}
+                        <div class="posal">
+                                <p>{{ posal.pozicija }}</p>
+                                <p>{{ posal.poslodavac }}</p>
+                                <p>{{ posal.placa }}</p>
+                                <a class="edit-btn" href="{{ url_for('edit', posao_id=posal.id) }}">Izmijeni</a>
+                                <a class="delete-btn" href="{{ url_for('delete', posao_id=posal.id) }}">Obriši</a>
+                        </div>
+                {% endfor %}
+        </div>
+{% endblock %}

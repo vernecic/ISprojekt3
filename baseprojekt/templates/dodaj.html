@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>Dodavanje posla</title>
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='styles.css') }}"
+    />
+</head>
+<body>
+    <h1>Dodaj posao</h1>
+    <form action="/spremi_posao" method="post">
+      <label for="pozicija">Unesite poziciju:</label>
+      <input type="text" name="pozicija" required /><br />
+      <label for="poslodavac">Unesite poslodavca:</label>
+      <input type="text" name="poslodavac" required /><br />
+      <label for="lokacija">Unesite lokaciju:</label>
+      <input type="text" name="lokacija" required /><br />
+      <label for="placa">Unesite plaću:</label>
+      <input type="number" name="placa" required /><br />
+      <label for="opis">Unesite opis posla:</label>
+      <input type="text" name="opis" required /><br />
+      <label for="nudimo">Što poslodavac nudi:</label>
+      <input type="text" name="nudimo" required /><br />
+      <label for="trazimo">Što se traži od kandidata:</label>
+      <input type="text" name="trazimo" required /><br />      
+      <button type="submit">Spremi</button>
+    </form>
+</body>
+</html>

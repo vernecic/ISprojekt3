@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upis</h1>
+        <form action="/spremi_posao" method="POST">
+            Posao<input type="text" name="pozicija" placeholder="Unesite poziciju">
+            Poslodavac<input type="text" name="poslodavac" placeholder="Unesite poslodavca">
+            Lokacija<input type="text" name="lokacija" placeholder="Unesite lokaciju">
+            Plaća(€)<input type="number" step="100" name="placa" placeholder="Unesite plaću">
+            Opis<input type="text" name="opis" placeholder="Unesite opis posla">
+            Što nudimo<input type="text" name="nudimo" placeholder="Što poslodavac nudi">
+            Što tražimo<input type="text" name="trazimo" placeholder="Što se traži od kandidata">
+            <input type="submit" value="Spremi posao"/>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

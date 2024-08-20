@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h2>Popis poslova:</h2>
+        <div class="content">
+            {% if posal in poslovi %}
+                <div class="posal">
+                    <p><b>#{{ posal.id }}</b></p>
+                    <p>{{ posal.pozicija }}</p>
+                    <p>{{ posal.poslodavac }}</p>
+                    <p>{{ posal.placa }}</p>
+                </div>
+                console.log(posal.id, posal.pozicija, posal.poslodavac)
+            {% endif %}
+        </div>
+{% endblock %}
